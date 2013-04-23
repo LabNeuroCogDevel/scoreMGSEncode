@@ -5,7 +5,7 @@ maxInterpSamples = 5;       % Maixmum number of samples with lost pupil fix to i
 
 
 % GETS A LIST OF ALL OF THE SUBJECTS THAT NEED TO BE PROCESSED
-[num txt raw] = xlsread('~/remotes/B/bea_res/Personal/David/MGSEncode/Behavioral/MGSEncodeSubjectList_unix.xls',1);
+[num txt raw] = xlsread('/mnt/B/bea_res/Personal/David/MGSEncode/subjectlist_2013_04_22.xls',1);
 clear num txt
 
 results = [];

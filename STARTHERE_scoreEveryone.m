@@ -1,3 +1,9 @@
+%%%%%%%%%%
+% 2013 04 22
+% Arranging David Montez's Code
+% all of output in scored-20130422.mat
+%%%%%%%%%%
+
 %% INPUT
 % xls (old format please!) with header:
 % LunaID, Sex, Visit, Age at Visit, Path to Eyd, Eyd File, Date of Scan
@@ -50,13 +56,15 @@
 % and set by runNumber
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear all
 
 %% add paths
 % import that ilab is in this path
 addpath(genpath('.')) 
 
 %% load excel file, open each eyd, fixation correct, score
-MGSEncodeAnalyze
+%results = MGSEncodeAnalyze;
+results = MGSEncodeAnalyze_unixpath;
 % eyd raw data --> results 
 
 %% lump data into age groups, eccentricity, etc
@@ -68,3 +76,5 @@ ProcessMGSEncodeResults
 RescoreMGSEncode
 %   MGSEncodeData --> correctArray  & incorrectArray
 
+%% save
+save('scored.mat')
