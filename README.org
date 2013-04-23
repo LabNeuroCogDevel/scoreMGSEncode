@@ -1,0 +1,23 @@
+* Score Memory Guided Saccades  
+  - use STARTHERE_scoreEveryone.m
+  - ignore RUNME_MGSEncodeAnalyze.m (for now)
+    - should eventually take single eyd and score
+
+* Pipeline
+  see STARTHERE_scoreEveryone.m
+** genxls.bash
+     compiles list (subjectsID_date_run_visit_eyd_path_sex_age.txt) to be reordered into subjectlist_2013_04_22.xls
+** MGSEncodeAnalyze*.m
+  reads xls and outputs saccade list (saved as results)
+** ProcessMGSEncodeResults
+** RescoreMGSEncode
+ 
+* Notes
+- what are eccentricity and IQR metrics all about??
+* TODO
+- Scoring should be done iteratively instead of all at once
+
+- genxls should write the finial xls
+- MGSEncodeAnalyze should take an xls file as an argument
+
+
